@@ -1,0 +1,1 @@
+document.write("hello!i am from external java script file")

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function validateName() {
+            var a = document.f1.t1.value.length;
+            var status = true;
+            if (a < 6 || a > 10) {
+                document.getElementById("s1").innerText = "enter valid username from 6 to 10 chars";
+                status = false;
+            }
+            return status;
+        }
+        function validatepwd(b) {
+            var status = true;
+            if (b.length < 4 || b.length > 8) {
+                document.getElementById("s2").innerText = "enter valid pwd from 4 to 8 chars";
+                status=false;
+            }
+            return status;
+
+        }
+        function validateSame()
+        {
+            var status = true; 
+            var a = document.f1.t2.value;
+            var b = document.f1.t5.value;
+            if (a !== b) {
+                document.getElementById("s3").innerText = "passwords needs to be same";
+                status = false;
+            }
+            
+            return status;
+
+        }
+        function p1() {
+            document.getElementById("s2").innerText = " ";
+
+        }
+        function p2() {
+            document.getElementById("s3").innerText = " ";
+
+        }
+        function p3() {
+            document.getElementById("s1").innerText = " ";
+
+        }
+    </script>
+</head>
+<body>
+    <form name="f1"  action="welcome.html">
+        <h2>
+        Enter Username:<input type="text" name="t1" onchange=" return validateName()" onfocus="p3()" /><span id="s1" style="color:red"></span></br></br></br>
+        Enter Password:<input type="password" name="t2" onchange="return validatepwd(this.value)" onfocus="p1()" /><span id="s2" style="color:red"></span></br></br></br>
+        confirm Password:<input type="password" name="t5" onchange="return validateSame()" onfocus="p2()" /><span id="s3" style="color:red"></span></br></br></br>
+
+        <input type="submit" name="t3" value="SIGNIN"  \>
+    </form>
+    <form action="signup.html">
+        <input type="submit" name="t4" value="SIGNUP"/>
+    </form>
+
+</body>
+</html>

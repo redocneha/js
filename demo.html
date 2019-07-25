@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JS</title>
+    <script>
+        function abc() {
+            alert('function executed');
+        }
+        function xyz() {
+            alert('function  xyz() executed');
+        }
+        function xyz1() {
+            alert('function  xyz1() executed');
+        }
+        function xyz2() {
+            alert('function  xy2z() executed');
+        }
+        function check() {
+           
+            var size = document.f1.t1.value.length;
+            if (size > 5)
+                return true;
+            else
+                return false;
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        JS SCRIPT DEMO
+    </h1>
+    <hr>
+    <h3>Printing the statement 10 times</h3>
+    <h2>
+        <script>
+            for (i = 0; i < 10; i++)
+            {
+                document.write("hello<br>");
+            }
+        </script>
+    </h2>
+    <h3>Thanks</h3>
+    <form action="abc.html" name="f1" onsubmit="return check()">
+        <input type="text" name="t1" /><br />
+        <input type="submit" name="t2" value="submit" /><br />
+    </form>
+    <input type="text" name="t1" onfocus="alert("have focus") />
+    <input type="button" name="b1" value="CLICK" onclick="abc()" />
+    <input type="button" name="b2" value="DOUBLECLICK" ondbclick="xyz()" />
+    <input type="button" name="b3" value="Comeover" onmouseover="xyz1()" />
+    <input type="button" name="b4" value="mouseout" onmouseout="xyz2()" />
+
+</body> 
+</html>

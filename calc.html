@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function check(a,b) {
+            
+            if (isNaN(a)) {
+                alert("enter valid value of a");
+                return false;
+            }
+           if (isNaN(b)) {
+                alert("enter valid value of b");
+                return false;
+            }
+            return true;
+        }
+        function add() {
+
+            var a = document.f1.t1.value;
+            var b = document.f1.t2.value;
+           
+            if (check(a, b) == true) {
+                var res = eval(a) + eval(b);
+
+                document.getElementById("s1").innerText = res;
+            }
+           
+
+        }
+        function subtract() {
+            var a = document.f1.t1.value;
+            var b = document.f1.t2.value;
+            if (check(a, b) == true) {
+                var res = eval(a) - eval(b);
+                document.getElementById("s1").innerText = res;
+            }
+        }
+        function multiply() {
+            var a = document.f1.t1.value;
+            var b = document.f1.t2.value;
+            if (check(a, b) == true) {
+                var res = eval(a) * eval(b);
+                document.getElementById("s1").innerText = res;
+            }
+        }
+        
+        function divide() {
+            var a = document.f1.t1.value;
+            var b = document.f1.t2.value;
+            if (check(a, b) == true) {
+                var res = eval(a) / eval(b);
+                document.getElementById("s1").innerText = res;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        <h2>
+            Enter 1st Number<input type="text" name="t1" id="m1" required />
+            Enter 2nd Number<input type="text" name="t2" id="'m2" required />
+    </form><br />
+    Result:<span id="s1"></span></br>
+    <input type="button" name="t3" value="ADD" onclick="add()" /><br />
+    <input type="button" name="t4" value="Subtract" onclick="subtract()" /><br />
+    <input type="button" name="t5" value="Multiply" onclick="multiply()" /><br />
+    <input type="button" name="t6" value="divide" onclick="divide()" /><br />
+
+
+    </form>
+</body>
+</html>

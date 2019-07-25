@@ -1,0 +1,12 @@
+﻿p{
+    color:red;
+    background-color:yellow
+}
+.one {
+    color: red;
+    background-color: black
+}
+p.three {
+    color: teal;
+    background-color: white
+}

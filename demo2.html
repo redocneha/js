@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var sw= true;
+        function abc() {
+            name = prompt("enter name:");
+            document.getElementById("s1").innerText = "Welcome"+name;
+        }
+        function xyz() {
+           
+            var login = "<form><h2>Username:<input type='text' name='t1'></h2></form>";
+            if (sw) {
+                document.getElementById("p1").innerText = "Hide login"
+                document.getElementById("d1").innerHTML = login;
+            }
+            else {
+                document.getElementById("p1").innerText = "please login"
+                document.getElementById("d1").innerHTML = " ";
+            }
+            sw = !sw;
+           
+
+        }
+    </script>
+</head>
+<body>
+    <h1>DOM</h1>
+    <hr />
+    <script>
+        document.write("<br>" + location.protocol);
+
+    </script>
+    <hr />
+    <script>
+        document.write("<br>" + navigator.appCodeName);
+
+    </script>
+    <span id="s1"></span></br>
+    <input type="button" name="b1" value="GREET" onclick="abc()" />
+    
+    <p onclick="xyz()" id="p1">Show Login</p>
+    <div id="d1"></div>
+        
+</body>
+</html>
